@@ -30,10 +30,12 @@ viewTaskButton.addEventListener("click", function(){
        tasklist = JSON.parse(viewTasks)
     }
 
+    const container = document.getElementById("ViewTasks");
+    container.innerHTML = ""
+
     for (const task of tasklist){
         const newDiv = document.createElement("div");
         newDiv.textContent = task;
-        const container = document.getElementById("ViewTasks");
         container.appendChild(newDiv);
     }
 
